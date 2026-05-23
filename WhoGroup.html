@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О группе | Motionless in Black</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Georgia, serif;
+      background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.95)),
+        url("photo4.png");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      padding: 30px;
+    }
+
+    .back {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      color: white;
+      text-decoration: none;
+      border: 1px solid red;
+      padding: 10px 20px;
+      background: rgba(0,0,0,0.75);
+      border-radius: 6px;
+      z-index: 10;
+      transition: 0.3s;
+    }
+
+    .back:hover {
+      background: red;
+      color: black;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 80px auto;
+      background: rgba(0,0,0,0.75);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 14px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 0 40px black;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 64px;
+      color: #b80000;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      margin-bottom: 30px;
+      text-shadow: 0 0 25px black;
+    }
+
+    .main-info {
+      font-size: 20px;
+      line-height: 1.7;
+      color: #ddd;
+      margin-bottom: 40px;
+    }
+
+    details {
+      margin-bottom: 25px;
+      border: 1px solid rgba(255,0,0,0.4);
+      border-radius: 10px;
+      overflow: hidden;
+      background: rgba(10,10,10,0.85);
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 22px;
+      font-size: 26px;
+      color: #ff2222;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      background: rgba(60,0,0,0.6);
+    }
+
+    .section-content {
+      padding: 25px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 25px;
+      align-items: start;
+    }
+
+    .section-content img {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.25);
+      box-shadow: 0 0 25px black;
+    }
+
+    .section-content p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #ddd;
+    }
+
+    .albums-box {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .albums-btn {
+      display: inline-block;
+      text-decoration: none;
+      color: #ffd0d0;
+      border: 2px solid red;
+      padding: 18px 55px;
+      border-radius: 10px;
+      background: rgba(120,0,0,0.75);
+      font-size: 28px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      transition: 0.3s;
+      box-shadow: 0 0 20px rgba(255,0,0,0.2);
+    }
+
+    .albums-btn:hover {
+      background: red;
+      color: black;
+      box-shadow: 0 0 30px red;
+    }
+
+    @media (max-width: 800px) {
+
+      h1 {
+        font-size: 38px;
+      }
+
+      .container {
+        padding: 25px;
+      }
+
+      .section-content {
+        grid-template-columns: 1fr;
+      }
+
+      .albums-btn {
+        width: 100%;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <a href="preview.html" class="back">← На главную</a>
+
+  <div class="container">
+
+    <h1>О группе</h1>
+
+    <div class="main-info">
+      <p>
+        Motionless in Black — вымышленная gothic metalcore группа с мрачной атмосферой,
+        тяжёлым звучанием и театральными концертами.
+      </p>
+    </div>
+
+    <details open>
+      <summary>История создания</summary>
+
+      <div class="section-content">
+        <img src="photo2.png">
+
+        <p>
+          История Motionless in Black начинается с underground-сцены,
+          старых клубов, красного света и тяжёлой музыки.
+        </p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Стиль музыки</summary>
+
+      <div class="section-content">
+        <img src="photo3.png">
+
+        <p>
+          Группа сочетает metalcore, industrial metal и gothic rock.
+        </p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Сценический образ</summary>
+
+      <div class="section-content">
+        <img src="photo5.png">
+
+        <p>
+          Чёрные костюмы, грим, свечи, дым и атмосфера хоррора.
+        </p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Тематика песен</summary>
+
+      <div class="section-content">
+        <img src="photo6.png">
+
+        <p>
+          Тексты песен рассказывают о страхе, одиночестве и внутренней тьме.
+        </p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Концерты</summary>
+
+      <div class="section-content">
+        <img src="photo7.png">
+
+        <p>
+          Концерты Motionless in Black выглядят как настоящий тёмный спектакль.
+        </p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Участники группы</summary>
+
+      <div class="section-content">
+        <img src="photo8.png">
+
+        <p>
+          Каждый участник имеет собственный сценический образ и символ.
+        </p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Альбомы и эпохи</summary>
+
+      <div class="section-content">
+        <img src="photo9.png">
+
+        <p>
+          Каждый альбом Motionless in Black — отдельная глава общей истории.
+        </p>
+      </div>
+    </details>
+
+    <div class="albums-box">
+      <a href="alboms.html" class="albums-btn">
+        Альбомы
+      </a>
+    </div>
+
+  </div>
+
+</body>
+</html>

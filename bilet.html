@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Билеты | Motionless in Black</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Georgia, serif;
+      background:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.85)),
+        url("photo1.png");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      padding: 30px;
+    }
+
+    .back {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      color: white;
+      text-decoration: none;
+      border: 1px solid red;
+      padding: 10px 20px;
+      background: rgba(0,0,0,0.7);
+      border-radius: 6px;
+      z-index: 10;
+    }
+
+    .title {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 300px;
+    }
+
+    .title h1 {
+      font-size: 72px;
+      color: #b80000;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      text-shadow: 0 0 25px black;
+    }
+
+    .title p {
+      color: #aaa;
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    .panel {
+      max-width: 1200px;
+      margin: auto;
+      background: rgba(0,0,0,0.75);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 12px;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 0 40px black;
+      overflow: hidden;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .field {
+      padding: 30px;
+      border-right: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .field:last-child {
+      border-right: none;
+    }
+
+    label {
+      display: block;
+      text-align: center;
+      font-size: 22px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 25px;
+    }
+
+    select {
+      width: 100%;
+      padding: 18px;
+      background: rgba(10,10,10,0.9);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 8px;
+      font-size: 18px;
+    }
+
+    .bottom {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+
+    button {
+      width: 480px;
+      max-width: 100%;
+      padding: 18px;
+      background: rgba(120,0,0,0.75);
+      color: #ffd0d0;
+      border: 2px solid red;
+      border-radius: 8px;
+      font-size: 28px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: red;
+      color: black;
+      box-shadow: 0 0 25px red;
+    }
+
+    .warning {
+      margin-top: 18px;
+      color: #aaa;
+      text-transform: uppercase;
+      font-size: 15px;
+    }
+
+    #noTickets {
+      display: none;
+      margin-top: 25px;
+      font-size: 56px;
+      color: red;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      text-shadow:
+        0 0 10px red,
+        0 0 30px black;
+    }
+
+    @media (max-width: 900px) {
+      .title {
+        margin-bottom: 120px;
+      }
+
+      .title h1 {
+        font-size: 42px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .field {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.15);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a href="Comcert.html" class="back">← Назад</a>
+
+  <div class="title">
+    <h1>Билеты</h1>
+    <p>Всё вымышленное</p>
+  </div>
+
+  <div class="panel">
+
+    <div class="form-row">
+
+      <div class="field">
+        <label>Выберите концерт</label>
+        <select>
+          <option>Helsinki — Black Arena</option>
+          <option>Berlin — Dark Hall</option>
+          <option>Warsaw — Nocturne Stage</option>
+          <option>Prague — Shadow Club</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Количество человек</label>
+        <select>
+          <option>1 человек</option>
+          <option>2 человека</option>
+          <option>3 человека</option>
+          <option>4 человека</option>
+          <option>5 человек</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Выберите ряд</label>
+        <select>
+          <option>1 ряд</option>
+          <option>2 ряд</option>
+          <option>3 ряд</option>
+          <option>VIP ряд</option>
+          <option>Танцпол</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="bottom">
+      <button onclick="showNoTickets()">Купить билет</button>
+
+      <p class="warning">
+        ⚠ Это всё вымышленное. Никаких настоящих билетов не существует.
+      </p>
+
+      <div id="noTickets">БИЛЕТОВ НЕТ</div>
+    </div>
+
+  </div>
+
+  <script>
+    function showNoTickets() {
+      document.getElementById("noTickets").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

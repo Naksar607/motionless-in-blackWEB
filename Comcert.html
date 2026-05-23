@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motionless in Black | Концерты</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background:
+        linear-gradient(rgba(0,0,0,0.9), rgba(15,0,0,0.95)),
+        url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 40px;
+      text-decoration: none;
+      color: white;
+      border: 2px solid #ff0000;
+      padding: 12px 24px;
+      transition: 0.3s;
+      background: rgba(0,0,0,0.6);
+      border-radius: 8px;
+    }
+
+    .back-btn:hover {
+      background: #ff0000;
+      color: black;
+      box-shadow: 0 0 20px #ff0000;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 60px;
+      margin-bottom: 15px;
+      color: #ff0000;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      text-shadow:
+        0 0 10px #ff0000,
+        0 0 30px #990000;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #cfcfcf;
+      margin-bottom: 60px;
+      font-size: 20px;
+    }
+
+    .concerts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .concert-card {
+      background: rgba(0,0,0,0.75);
+      border: 2px solid rgba(255,0,0,0.4);
+      padding: 30px;
+      border-radius: 15px;
+      transition: 0.3s;
+      backdrop-filter: blur(4px);
+    }
+
+    .concert-card:hover {
+      transform: translateY(-8px);
+      border-color: #ff0000;
+      box-shadow:
+        0 0 20px rgba(255,0,0,0.5),
+        0 0 40px rgba(255,0,0,0.3);
+    }
+
+    .concert-card h2 {
+      color: #ff2b2b;
+      margin-bottom: 15px;
+      font-size: 28px;
+    }
+
+    .concert-info {
+      margin-bottom: 10px;
+      color: #dddddd;
+      font-size: 17px;
+    }
+
+    .ticket-btn {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: white;
+      border: 2px solid #ff0000;
+      padding: 12px 22px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .ticket-btn:hover {
+      background: #ff0000;
+      color: black;
+      box-shadow: 0 0 20px #ff0000;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 40px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+      }
+
+      .concert-card {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <a href="preview.html" class="back-btn">← Назад</a>
+
+    <h1>Концерты</h1>
+
+    <p class="subtitle">
+      Тур Motionless in Black 2026
+    </p>
+
+    <div class="concerts">
+
+      <div class="concert-card">
+        <h2>Helsinki</h2>
+
+        <p class="concert-info">📍 Black Arena</p>
+        <p class="concert-info">📅 12 Июня 2026</p>
+        <p class="concert-info">🕘 20:00</p>
+
+        <a href="bilet.html" class="ticket-btn">Купить билет</a>
+      </div>
+
+      <div class="concert-card">
+        <h2>Berlin</h2>
+
+        <p class="concert-info">📍 Dark Hall</p>
+        <p class="concert-info">📅 18 Июня 2026</p>
+        <p class="concert-info">🕘 21:00</p>
+
+        <a href="bilet.html" class="ticket-btn">Купить билет</a>
+      </div>
+
+      <div class="concert-card">
+        <h2>Warsaw</h2>
+
+        <p class="concert-info">📍 Nocturne Stage</p>
+        <p class="concert-info">📅 24 Июня 2026</p>
+        <p class="concert-info">🕘 19:30</p>
+
+        <a href="bilet.html" class="ticket-btn">Купить билет</a>
+      </div>
+
+      <div class="concert-card">
+        <h2>Prague</h2>
+
+        <p class="concert-info">📍 Shadow Club</p>
+        <p class="concert-info">📅 29 Июня 2026</p>
+        <p class="concert-info">🕘 20:30</p>
+
+        <a href="bilet.html" class="ticket-btn">Купить билет</a>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

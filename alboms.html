@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Альбомы | Motionless in Black</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Georgia, serif;
+      background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.95)),
+        url("alboms.png");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      padding: 30px;
+    }
+
+    .back {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      color: white;
+      text-decoration: none;
+      border: 1px solid red;
+      padding: 10px 20px;
+      background: rgba(0,0,0,0.75);
+      border-radius: 6px;
+      z-index: 10;
+      transition: 0.3s;
+    }
+
+    .back:hover {
+      background: red;
+      color: black;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 80px auto;
+      background: rgba(0,0,0,0.75);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 14px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 0 40px black;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 64px;
+      color: #b80000;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      margin-bottom: 25px;
+      text-shadow: 0 0 25px black;
+    }
+
+    .intro {
+      font-size: 20px;
+      line-height: 1.7;
+      color: #ddd;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .album {
+      margin-bottom: 35px;
+      border: 1px solid rgba(255,0,0,0.4);
+      border-radius: 10px;
+      overflow: hidden;
+      background: rgba(10,10,10,0.85);
+    }
+
+    .album h2 {
+      padding: 22px;
+      font-size: 28px;
+      color: #ff2222;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      background: rgba(60,0,0,0.6);
+    }
+
+    .album-content {
+      padding: 25px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 25px;
+      align-items: start;
+    }
+
+    .album-content img {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.25);
+      box-shadow: 0 0 25px black;
+    }
+
+    .album-content p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #ddd;
+    }
+
+    @media (max-width: 800px) {
+      h1 {
+        font-size: 38px;
+      }
+
+      .container {
+        padding: 25px;
+      }
+
+      .album-content {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a href="WhoGroup.html" class="back">← Назад</a>
+
+  <div class="container">
+
+    <h1>Альбомы</h1>
+
+    <p class="intro">
+      Дискография Motionless in Black — это четыре мрачные главы одной истории.
+      Каждый альбом показывает новую сторону группы: страх, разрушение,
+      внутреннюю борьбу и принятие собственной тьмы.
+    </p>
+
+    <div class="album">
+      <h2>1. Welcome To The End</h2>
+
+      <div class="album-content">
+        <img src="albom1.png" alt="Welcome To The End">
+
+        <p>
+          Первый альбом Motionless in Black звучит сыро, холодно и тревожно.
+          Он рассказывает о начале падения героя во внутреннюю тьму.
+          В песнях много тяжёлых гитар, резких ударных, мрачных электронных
+          шумов и криков, будто записанных в заброшенном здании.
+          Главные темы альбома — одиночество, страх, потеря себя и первые
+          попытки выбраться из хаоса. Welcome To The End открывает историю
+          группы и задаёт её главный тон: тьма здесь не просто фон, а отдельный
+          персонаж, который постоянно находится рядом.
+        </p>
+      </div>
+    </div>
+
+    <div class="album">
+      <h2>2. Cathedrals of Ashes</h2>
+
+      <div class="album-content">
+        <img src="albom2.png" alt="Cathedrals of Ashes">
+
+        <p>
+          Второй альбом стал более готическим и театральным.
+          В Cathedrals of Ashes появляются хоровые вставки, органные звуки,
+          медленные вступления и ощущение огромного разрушенного собора.
+          Этот релиз посвящён маскам, вине, памяти и прошлому, которое
+          невозможно похоронить. Музыка звучит шире и кинематографичнее:
+          агрессивные куплеты сменяются драматичными припевами, а каждая
+          песня похожа на сцену из тёмного фильма. Альбом показывает группу
+          более зрелой и атмосферной.
+        </p>
+      </div>
+    </div>
+
+    <div class="album">
+      <h2>3. The Black Veil Collapse</h2>
+
+      <div class="album-content">
+        <img src="albom3.png" alt="The Black Veil Collapse">
+
+        <p>
+          The Black Veil Collapse — самый тяжёлый и злой альбом группы.
+          Здесь больше индустриального звучания, резких переходов,
+          механических эффектов и агрессивного вокала. По смыслу альбом
+          рассказывает о моменте, когда герой перестаёт прятаться за маской.
+          Чёрная вуаль падает, и вместе с ней рушится старая версия человека.
+          В песнях много гнева, боли и желания уничтожить всё, что держало
+          его в прошлом. Это самая разрушительная глава Motionless in Black.
+        </p>
+      </div>
+    </div>
+
+    <div class="album">
+      <h2>4. Silence Beneath the Red Moon</h2>
+
+      <div class="album-content">
+        <img src="albom4.png" alt="Silence Beneath the Red Moon">
+
+        <p>
+          Четвёртый альбом звучит мрачнее, глубже и эмоциональнее.
+          Silence Beneath the Red Moon посвящён тишине после разрушения.
+          Здесь герой уже не убегает от своей тьмы, а смотрит ей прямо в лицо.
+          В музыке становится больше мелодии, атмосферных пауз, чистого вокала
+          и тяжёлых, медленных моментов. Красная луна символизирует память,
+          боль и силу, которая появляется после принятия себя. Этот альбом
+          завершает первую большую эпоху группы и оставляет ощущение холодной,
+          но честной надежды.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

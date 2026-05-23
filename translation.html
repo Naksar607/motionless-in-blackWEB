@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Трансляция | Motionless in Black</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Georgia, serif;
+      background:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.9)),
+        url("photo1.png");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      padding: 30px;
+    }
+
+    .back {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      color: white;
+      text-decoration: none;
+      border: 1px solid red;
+      padding: 10px 20px;
+      background: rgba(0,0,0,0.75);
+      border-radius: 6px;
+      z-index: 10;
+      transition: 0.3s;
+    }
+
+    .back:hover {
+      background: red;
+      color: black;
+    }
+
+    .title {
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 280px;
+    }
+
+    .title h1 {
+      font-size: 72px;
+      color: #b80000;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      text-shadow: 0 0 25px black;
+    }
+
+    .title p {
+      color: #aaa;
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-top: 10px;
+    }
+
+    .stream-box {
+      max-width: 1100px;
+      margin: auto;
+      background: rgba(0,0,0,0.78);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 12px;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 0 40px black;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .screen {
+      height: 260px;
+      border: 2px solid rgba(255,0,0,0.5);
+      border-radius: 10px;
+      background:
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.95));
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 35px;
+      box-shadow: inset 0 0 35px black;
+    }
+
+    .screen h2 {
+      font-size: 38px;
+      color: #ddd;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+
+    .timer-title {
+      font-size: 24px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+
+    .timer {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .time-card {
+      width: 150px;
+      padding: 20px;
+      background: rgba(10,10,10,0.9);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255,0,0,0.15);
+    }
+
+    .time-card span {
+      display: block;
+      font-size: 42px;
+      color: red;
+      text-shadow: 0 0 15px red;
+    }
+
+    .time-card p {
+      color: #aaa;
+      text-transform: uppercase;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    .call-text {
+      margin-top: 10px;
+      margin-bottom: 25px;
+      font-size: 22px;
+      color: #ddd;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .buy-btn {
+      display: inline-block;
+      width: 420px;
+      max-width: 100%;
+      padding: 18px;
+      background: rgba(120,0,0,0.75);
+      color: #ffd0d0;
+      border: 2px solid red;
+      border-radius: 8px;
+      font-size: 26px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .buy-btn:hover {
+      background: red;
+      color: black;
+      box-shadow: 0 0 25px red;
+    }
+
+    @media (max-width: 900px) {
+      .title {
+        margin-bottom: 120px;
+      }
+
+      .title h1 {
+        font-size: 42px;
+      }
+
+      .stream-box {
+        padding: 25px;
+      }
+
+      .screen h2 {
+        font-size: 24px;
+      }
+
+      .time-card {
+        width: 120px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a href="preview.html" class="back">← На главную</a>
+
+  <div class="title">
+    <h1>Трансляция</h1>
+    <p>Live show begins soon</p>
+  </div>
+
+  <div class="stream-box">
+
+    <div class="screen">
+      <h2>Эфир ещё не начался</h2>
+    </div>
+
+    <div class="timer-title">
+      До начала концерта осталось
+    </div>
+
+    <div class="timer">
+      <div class="time-card">
+        <span id="days">00</span>
+        <p>Дней</p>
+      </div>
+
+      <div class="time-card">
+        <span id="hours">00</span>
+        <p>Часов</p>
+      </div>
+
+      <div class="time-card">
+        <span id="minutes">00</span>
+        <p>Минут</p>
+      </div>
+
+      <div class="time-card">
+        <span id="seconds">00</span>
+        <p>Секунд</p>
+      </div>
+    </div>
+
+    <p class="call-text">
+      Успейте занять своё место во тьме — билеты исчезают быстрее, чем свет.
+    </p>
+
+    <a href="bilet.html" class="buy-btn">Купить билет</a>
+
+  </div>
+
+  <script>
+    const concertDate = new Date("June 12, 2026 20:00:00").getTime();
+
+    function updateTimer() {
+      const now = new Date().getTime();
+      const distance = concertDate - now;
+
+      if (distance <= 0) {
+        document.getElementById("days").innerText = "00";
+        document.getElementById("hours").innerText = "00";
+        document.getElementById("minutes").innerText = "00";
+        document.getElementById("seconds").innerText = "00";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((distance / (1000 * 60)) % 60);
+      const seconds = Math.floor((distance / 1000) % 60);
+
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("minutes").innerText = minutes;
+      document.getElementById("seconds").innerText = seconds;
+    }
+
+    updateTimer();
+    setInterval(updateTimer, 1000);
+  </script>
+
+</body>
+</html>
