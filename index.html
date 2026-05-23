@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Motionless in Black</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-family:Georgia, serif;
+
+      background:
+      linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.9)),
+      url("photo1.png");
+
+      background-size:cover;
+      background-position:center;
+      background-attachment:fixed;
+
+      overflow:hidden;
+    }
+
+    .main-box{
+      text-align:center;
+      background:rgba(0,0,0,0.55);
+      padding:60px;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,0.15);
+      backdrop-filter:blur(5px);
+
+      box-shadow:
+      0 0 30px rgba(0,0,0,0.8),
+      0 0 60px rgba(255,0,0,0.15);
+    }
+
+    h1{
+      font-size:78px;
+      color:#b80000;
+      text-transform:uppercase;
+      letter-spacing:8px;
+
+      text-shadow:
+      0 0 10px #000,
+      0 0 25px #000;
+
+      margin-bottom:20px;
+    }
+
+    p{
+      color:#cfcfcf;
+      font-size:22px;
+      letter-spacing:3px;
+      text-transform:uppercase;
+
+      margin-bottom:45px;
+    }
+
+    .enter-btn{
+      display:inline-block;
+
+      text-decoration:none;
+
+      padding:20px 70px;
+
+      font-size:28px;
+      letter-spacing:4px;
+      text-transform:uppercase;
+
+      color:#ffd0d0;
+
+      border:2px solid red;
+      border-radius:10px;
+
+      background:rgba(120,0,0,0.75);
+
+      transition:0.3s;
+
+      box-shadow:
+      0 0 20px rgba(255,0,0,0.2);
+    }
+
+    .enter-btn:hover{
+      background:red;
+      color:black;
+
+      transform:scale(1.05);
+
+      box-shadow:
+      0 0 25px red,
+      0 0 50px rgba(255,0,0,0.5);
+    }
+
+    @media(max-width:768px){
+
+      .main-box{
+        width:90%;
+        padding:40px 20px;
+      }
+
+      h1{
+        font-size:42px;
+      }
+
+      p{
+        font-size:16px;
+      }
+
+      .enter-btn{
+        width:100%;
+        font-size:22px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="main-box">
+
+    <h1>Motionless in Black</h1>
+
+    <p>
+      Enter the darkness
+    </p>
+
+    <a href="preview.html" class="enter-btn">
+      Войти
+    </a>
+
+  </div>
+
+</body>
+</html>
